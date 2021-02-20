@@ -1,10 +1,16 @@
-import Navbar from "../../components/Navbar";
+import Head from "next/head";
 
 const People = () => {
   return (
-    <div>
-      <h1>All the people</h1>
-    </div>
+    <>
+      <Head>
+        <title>People List </title>
+        <meta name="keywords" content="people" />
+      </Head>
+      <div>
+        <h1>All the people</h1>
+      </div>
+    </>
   );
 };
 
