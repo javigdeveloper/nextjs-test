@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Link from "next/link";
+import styles from "../../styles/Person.module.css";
 
 export const getStaticPaths = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -38,6 +40,9 @@ const Details = ({ person }) => {
         <p>{person.website}</p>
         <p>{person.address.city}</p>
       </div>
+      <Link href="/people">
+        <a className={styles.backToPeople}>Back to people</a>
+      </Link>
     </>
   );
 };
